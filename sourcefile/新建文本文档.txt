@@ -1,0 +1,43 @@
+CPaintDC dc(this); // device context for painting
+CRect   rect;   
+GetClientRect(&rect);   
+CDC   dcMem;   
+dcMem.CreateCompatibleDC(&dc);   
+CBitmap   bmpBackground;   
+bmpBackground.LoadBitmap(IDB_BITMAP1); 
+BITMAP   bitmap;   
+bmpBackground.GetBitmap(&bitmap);   
+CBitmap   *pbmpOld=dcMem.SelectObject(&bmpBackground);   
+dc.StretchBlt(0,0,rect.Width(),rect.Height(),&dcMem,0,0,bitmap.bmWidth,bitmap.bmHeight,SRCCOPY); 
+
+D:\Program Files\opencv\build\include
+D:\Program Files\opencv\build\include\opencv
+D:\Program Files\opencv\build\include\opencv2
+
+D:\Program Files\opencv\build\x86\vc10\staticlib
+D:\Program Files\opencv\build\x86\vc10\lib
+
+opencv_ts300d.lib
+opencv_world300d.lib
+opencv_calib3d300d.lib
+opencv_core300d.lib
+opencv_features2d300d.lib
+opencv_flann300d.lib
+opencv_highgui300d.lib
+opencv_imgcodecs300d.lib
+opencv_imgproc300d.lib
+opencv_ml300d.lib
+opencv_objdetect300d.lib
+opencv_photo300d.lib
+opencv_shape300d.lib
+opencv_stitching300d.lib
+opencv_superres300d.lib
+opencv_ts300d.lib
+opencv_video300d.lib
+opencv_videoio300d.lib
+opencv_videostab300d.lib
+
+CFont CUi1View::m_Font1, CUi1View::m_Font2 
+m_Font1.CreatePointFont(120, "Impact"); 
+m_Font3.CreatePointFont(120, "Arial"); 
+pDC->SelectObject(&m_Font2); 
